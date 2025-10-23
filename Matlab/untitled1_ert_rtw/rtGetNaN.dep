@@ -1,0 +1,11 @@
+rtGetNaN.o: \
+ /Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtGetNaN.c \
+ /Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtwtypes.h \
+ /Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtGetNaN.h \
+ /Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rt_nonfinite.h
+
+/Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtwtypes.h:
+
+/Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtGetNaN.h:
+
+/Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rt_nonfinite.h:

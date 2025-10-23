@@ -1,0 +1,11 @@
+rtGetInf.o: \
+ /Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtGetInf.c \
+ /Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtwtypes.h \
+ /Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtGetInf.h \
+ /Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rt_nonfinite.h
+
+/Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtwtypes.h:
+
+/Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rtGetInf.h:
+
+/Users/morswin/Projekt_TESA/Matlab/untitled1_ert_rtw/rt_nonfinite.h:
