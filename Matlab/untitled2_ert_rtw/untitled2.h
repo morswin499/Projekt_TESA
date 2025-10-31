@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'untitled2'.
  *
- * Model version                  : 1.0
+ * Model version                  : 1.1
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sun Oct 19 20:54:53 2025
+ * C/C++ source code generated on : Thu Oct 30 18:24:58 2025
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -73,7 +73,6 @@
 /* Block signals (default storage) */
 typedef struct {
   real_T Basesensorblock_o1[3];        /* '<S1>/Base sensor block' */
-  real_T Basesensorblock_o2[3];        /* '<S1>/Base sensor block' */
   real_T Basesensorblock_o3[3];        /* '<S1>/Base sensor block' */
 } B_untitled2_T;
 
@@ -83,6 +82,10 @@ typedef struct {
   struct {
     void *LoggedData;
   } Scope_PWORK;                       /* '<Root>/Scope' */
+
+  struct {
+    void *LoggedData;
+  } Scope1_PWORK;                      /* '<Root>/Scope1' */
 } DW_untitled2_T;
 
 /* Real-time Model Data Structure */

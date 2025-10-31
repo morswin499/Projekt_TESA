@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'untitled2'.
  *
- * Model version                  : 1.0
+ * Model version                  : 1.1
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sun Oct 19 20:54:53 2025
+ * C/C++ source code generated on : Thu Oct 30 18:24:58 2025
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -252,7 +252,6 @@ void untitled2_step(void)
 {
   int16_T b_output[3];
   int16_T b_output_0[3];
-  int16_T b_output_1[3];
   uint8_T output_raw[6];
   uint8_T SwappedDataBytes;
   uint8_T status;
@@ -290,10 +289,6 @@ void untitled2_step(void)
                       107UL, &output_raw[0], 6UL, false, true);
     memcpy((void *)&b_output_0[0], (void *)&output_raw[0], (size_t)3 * sizeof
            (int16_T));
-  } else {
-    b_output_0[0] = 0;
-    b_output_0[1] = 0;
-    b_output_0[2] = 0;
   }
 
   status = 40U;
@@ -304,40 +299,31 @@ void untitled2_step(void)
   if (status == 0) {
     MW_I2C_MasterRead(untitled2_DW.obj.i2cobj_MAG.I2CDriverObj.MW_I2C_HANDLE,
                       30UL, &output_raw[0], 6UL, false, true);
-    memcpy((void *)&b_output_1[0], (void *)&output_raw[0], (size_t)3 * sizeof
+    memcpy((void *)&b_output_0[0], (void *)&output_raw[0], (size_t)3 * sizeof
            (int16_T));
   } else {
-    b_output_1[0] = 0;
-    b_output_1[1] = 0;
-    b_output_1[2] = 0;
+    b_output_0[0] = 0;
+    b_output_0[1] = 0;
+    b_output_0[2] = 0;
   }
 
   /* MATLABSystem: '<S1>/Base sensor block' */
   untitled2_B.Basesensorblock_o1[0] = (real_T)b_output[0] * 2.0 / 32768.0;
 
   /* MATLABSystem: '<S1>/Base sensor block' */
-  untitled2_B.Basesensorblock_o2[0] = (real_T)b_output_0[0] * 245.0 / 32768.0;
-
-  /* MATLABSystem: '<S1>/Base sensor block' */
-  untitled2_B.Basesensorblock_o3[0] = (real_T)b_output_1[0] * 4.0 / 32768.0;
+  untitled2_B.Basesensorblock_o3[0] = (real_T)b_output_0[0] * 4.0 / 32768.0;
 
   /* MATLABSystem: '<S1>/Base sensor block' */
   untitled2_B.Basesensorblock_o1[1] = (real_T)b_output[1] * 2.0 / 32768.0;
 
   /* MATLABSystem: '<S1>/Base sensor block' */
-  untitled2_B.Basesensorblock_o2[1] = (real_T)b_output_0[1] * 245.0 / 32768.0;
-
-  /* MATLABSystem: '<S1>/Base sensor block' */
-  untitled2_B.Basesensorblock_o3[1] = (real_T)b_output_1[1] * 4.0 / 32768.0;
+  untitled2_B.Basesensorblock_o3[1] = (real_T)b_output_0[1] * 4.0 / 32768.0;
 
   /* MATLABSystem: '<S1>/Base sensor block' */
   untitled2_B.Basesensorblock_o1[2] = (real_T)b_output[2] * 2.0 / 32768.0;
 
   /* MATLABSystem: '<S1>/Base sensor block' */
-  untitled2_B.Basesensorblock_o2[2] = (real_T)b_output_0[2] * 245.0 / 32768.0;
-
-  /* MATLABSystem: '<S1>/Base sensor block' */
-  untitled2_B.Basesensorblock_o3[2] = (real_T)b_output_1[2] * 4.0 / 32768.0;
+  untitled2_B.Basesensorblock_o3[2] = (real_T)b_output_0[2] * 4.0 / 32768.0;
 
   /* End of Outputs for SubSystem: '<Root>/LSM9DS1 IMU Sensor' */
 
@@ -354,13 +340,13 @@ void untitled2_step(void)
 void untitled2_initialize(void)
 {
   /* Registration code */
-  rtmSetTFinal(untitled2_M, 30.0);
+  rtmSetTFinal(untitled2_M, -1);
 
   /* External mode info */
-  untitled2_M->Sizes.checksums[0] = (3471286302U);
-  untitled2_M->Sizes.checksums[1] = (2563287817U);
-  untitled2_M->Sizes.checksums[2] = (3330987326U);
-  untitled2_M->Sizes.checksums[3] = (1186402741U);
+  untitled2_M->Sizes.checksums[0] = (3498128294U);
+  untitled2_M->Sizes.checksums[1] = (3921169825U);
+  untitled2_M->Sizes.checksums[2] = (3575059454U);
+  untitled2_M->Sizes.checksums[3] = (1781641517U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
@@ -374,7 +360,7 @@ void untitled2_initialize(void)
     rteiSetModelMappingInfoPtr(untitled2_M->extModeInfo,
       &untitled2_M->SpecialInfo.mappingInfo);
     rteiSetChecksumsPtr(untitled2_M->extModeInfo, untitled2_M->Sizes.checksums);
-    rteiSetTFinalTicks(untitled2_M->extModeInfo, 300);
+    rteiSetTFinalTicks(untitled2_M->extModeInfo, -1);
   }
 
   /* SystemInitialize for Atomic SubSystem: '<Root>/LSM9DS1 IMU Sensor' */

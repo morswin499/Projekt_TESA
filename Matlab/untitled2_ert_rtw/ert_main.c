@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'untitled2'.
  *
- * Model version                  : 1.0
+ * Model version                  : 1.1
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sun Oct 19 20:54:53 2025
+ * C/C++ source code generated on : Thu Oct 30 18:24:58 2025
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -76,7 +76,7 @@ int main(void)
   rtmSetErrorStatus(untitled2_M, 0);
 
   /* Set Final Simulation Time in Ticks */
-  errorCode = extmodeSetFinalSimulationTime((extmodeSimulationTime_T) 300);
+  errorCode = extmodeSetFinalSimulationTime((extmodeSimulationTime_T) -1);
 
   /* Parse External Mode command line arguments */
   errorCode = extmodeParseArgs(0, NULL);
